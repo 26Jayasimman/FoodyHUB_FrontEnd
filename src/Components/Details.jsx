@@ -19,8 +19,9 @@ function Details() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/restaurant/details/${id}`)
+      .get(`${process.env.REACT_APP_API_BASE_URL}/details/${id}`)
       .then((response) => {
+         console.log("API response:", response.data);
         setSelectRestaurent(response.data.restaurent);
       })
       .catch((err) => {
@@ -65,7 +66,7 @@ function Details() {
 
     axios({
       method: "GET",
-      url: `http://localhost:3001/menufile/${restaurant_id}`,
+      url: `${process.env.REACT_APP_API_BASE_URL}/${restaurant_id}`,
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => setMenu(response.data.menufile))
@@ -97,7 +98,7 @@ function Details() {
   }, 0);
 
   const handlePayment = async () => {
-    const res = await axios.post("http://localhost:3001/create-order", {
+    const res = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/create-order`, {
       amount: totalAmount,
     });
 

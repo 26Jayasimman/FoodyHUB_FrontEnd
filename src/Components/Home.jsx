@@ -17,7 +17,7 @@ function Home() {
 
     axios({
       method: "GET",
-      url: "http://localhost:3001/location",
+      url: `${process.env.REACT_APP_API_BASE_URL}/location`,
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => {
@@ -29,7 +29,7 @@ function Home() {
     //for mealtypes
  axios({
       method: "GET",
-      url: "http://localhost:3001/mealtypes",
+      url: `${process.env.REACT_APP_API_BASE_URL}/mealtypes`,
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => {

@@ -20,7 +20,7 @@ function Wallpaper({ locations }) {
 
     axios({
       method: "GET",
-      url: `http://localhost:3001/restaurant/${locationid}`,
+      url: `${process.env.REACT_APP_API_BASE_URL}/restaurant/${locationid}`,
       headers: { "Content-Type": "application/json" }, 
     })
       .then((response) => {

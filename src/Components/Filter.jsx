@@ -41,7 +41,7 @@ function Filter() {
     console.log("Sending to backend:", filterObject);
 
     axios
-      .post("http://localhost:3001/filter", filterObject)
+      .post(`${process.env.REACT_APP_API_BASE_URL}/filter`, filterObject)
       .then((res) => {
         setHotel(res.data.restaurants || []);
         setTotalPages(res.data.totalPages || 1);
@@ -56,7 +56,7 @@ function Filter() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/location")
+      .get(`${process.env.REACT_APP_API_BASE_URL}/location`)
       .then((res) => setLocations(res.data.locations || []))
       .catch((err) => console.error(err));
 
