@@ -1,0 +1,156 @@
+.box1 {
+  /* border: 1px solid blue; */
+  height: 800px;
+  width: 100%;
+  display: flex;
+  margin-top: 15px;
+}
+
+.box2 {
+  height: 900px;
+  width: 400px;
+  margin-left: 20px;
+  /* border: 3px dashed red; */
+}
+
+.fh {
+  margin-top: 10px;
+}
+
+.i1 {
+  height: 40px;
+  width: 300px;
+  margin-left: 20px;
+  text-align: center;
+  /* border: 5px black; */
+}
+
+.fh2 {
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+}
+
+.cb1 {
+  font-size: 25px;
+  margin-left: 30px;
+  border: none;
+}
+
+#it1,
+#it2,
+#it3,
+#it4,
+#it5,
+#it6,
+#it7,
+#it8,
+#it8,
+#it9,
+#it10 {
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+}
+
+#r1,
+#r2 {
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+}
+
+.ra {
+  font-size: 25px;
+  margin-left: 30px;
+  border: none;
+}
+
+.box3 {
+  /* border: 1px solid red; */
+  height: 800px;
+  width: 1250px;
+  margin-left: 40px;
+}
+
+.box4 {
+  /* border: 1px solid blueviolet; */
+  height: 44%;
+  width: 100%;
+  margin-bottom: 1%;
+  cursor: pointer;
+}
+
+.box5 {
+  /* border: 1px solid green; */
+  height: 44%;
+  width: 100%;
+  margin-top: 1%;
+}
+
+.box6 {
+  height: 9%;
+  width: 100%;
+  /* border: 1px solid black; */
+  margin-top: 1%;
+}
+
+.src2 {
+  height: 200px;
+  width: 200px;
+  border-radius: 30px;
+  /* border: 1px solid red; */
+}
+
+.box41 {
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 1px solid green; */
+  height: 200px;
+  width: auto;
+  margin-top: 15px;
+  /* margin-left: 15px; */
+}
+
+.box42 {
+  height: 200px;
+  width: 200px;
+  /* border: 1px solid yellow; */
+  margin-left: 40px;
+}
+
+.box43 {
+  /* border: 1px solid green; */
+  margin-left: 50px;
+}
+
+.box44 {
+  /* border: 1px solid orangered; */
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+.box6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.g1 {
+  margin-left: 10px;
+  border: 3px dashed red;
+  height: 900px;
+}
+
+.norestaurents {
+  font-size: -webkit-xxx-large;
+  text-align: center;
+  margin-top: 30px;
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: cursive; */
+}
+
+#reset-filter {
+  margin-left: 220px;
+}

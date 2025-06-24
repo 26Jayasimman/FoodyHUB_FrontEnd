@@ -1,0 +1,19 @@
+.google-login-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+/* .logoutdiv{
+  display: block;
+  border: 1px solid red;
+  height: 30px;
+  width: 100%;
+} */
+
+.logoutbutton{
+  /* border: 1px solid green; */
+  height: 30px;
+  width: 100%;
+}

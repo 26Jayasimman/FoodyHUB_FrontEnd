@@ -1,0 +1,44 @@
+.Card{
+  border: 1px solid black;
+  display: flex;
+  margin: 20px;
+  padding: 10px;
+  width: 100%; /* Let parent/grid define width */
+  max-width: 500px; /* Cap width if needed */
+  border-radius: 8px;
+  box-sizing: border-box;
+  align-items: center;
+  cursor: pointer;
+  gap: 20px; /* Clean spacing between image and text */
+
+}
+
+.QSIimgdiv{
+    height: 200px;
+   
+}
+
+.QSI_img{
+    /* border: 1px solid red; */
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.QSIcardbody{
+    text-align: center;
+    /* border: 1px solid yellow; */
+    /* margin-left: 10px; */
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.QSICdiv{
+    margin-top: 20px;
+
+}
+
+.paradiv{
+    margin-top: 30px;
+
+}

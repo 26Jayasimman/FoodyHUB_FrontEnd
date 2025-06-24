@@ -1,0 +1,101 @@
+
+.logdiv{
+    text-align:end;
+    margin:10px;
+    height: auto;
+}
+
+.b1{
+    height: 40px;
+    width: 90px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.b1:hover{
+    background-color: red;
+    color: white;
+}
+.m1{
+    border: 1px solid black;
+    height: 450px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+    background-image: url("/public/assets/bg1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(50%);
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+}
+
+.logodiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.logo{
+    text-align: center;
+    align-content: center;
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    border-radius: 100%;
+    display: flexbox;
+    justify-content: center;
+}
+
+.h1{
+    margin-top: 20px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.t1{
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    text-align: center;
+}
+
+.inputs{
+   display: flex;
+   gap: 10px;
+}
+
+.inputdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.s1{
+    border: none;
+    height: 35px;
+    border-radius: 10px;
+    text-align: center;
+    width:200px;
+    cursor: pointer;
+}
+
+.s2{
+    border: none;
+    height: 35px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+}
+
+.idiv{
+    margin-top: 100px;
+    border: none;
+    
+}
+
