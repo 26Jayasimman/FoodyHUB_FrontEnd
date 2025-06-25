@@ -19,9 +19,9 @@ function Details() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_BASE_URL}/details/${id}`)
+      .get(`${process.env.REACT_APP_API_BASE_URL}/restaurant/details/${id}`)
       .then((response) => {
-         console.log("API response:", response.data);
+          // console.log("API response:", response.data);
         setSelectRestaurent(response.data.restaurent);
       })
       .catch((err) => {
