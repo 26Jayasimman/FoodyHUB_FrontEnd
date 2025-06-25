@@ -66,7 +66,7 @@ function Details() {
 
     axios({
       method: "GET",
-      url: `${process.env.REACT_APP_API_BASE_URL}/${restaurant_id}`,
+      url: `${process.env.REACT_APP_API_BASE_URL}/menufile/${restaurant_id}`,
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => setMenu(response.data.menufile))
