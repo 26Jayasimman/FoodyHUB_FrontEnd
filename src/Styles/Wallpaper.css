@@ -13,6 +13,10 @@
     border: none;
 }
 
+#datalist{
+  border: none;
+  outline: none;
+}
 .b1:hover{
     background-color: red;
     color: white;
@@ -83,6 +87,8 @@
     text-align: center;
     width:200px;
     cursor: pointer;
+    border: none;
+    outline: none;
 }
 
 .s2{

@@ -13,6 +13,7 @@
   /* border: 3px dashed red; */
 }
 
+
 .fh {
   margin-top: 10px;
 }
@@ -73,9 +74,11 @@
 }
 
 .box4 {
-  /* border: 1px solid blueviolet; */
-  height: 44%;
+  border: 1px solid black;
+  height: 40%;
   width: 100%;
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px gray;
   margin-bottom: 1%;
   cursor: pointer;
 }
@@ -138,7 +141,8 @@
 
 .g1 {
   margin-left: 10px;
-  border: 3px dashed red;
+  /* border: 3px dashed red; */
+  box-shadow: 4px 4px 10px gray;
   height: 900px;
 }
 

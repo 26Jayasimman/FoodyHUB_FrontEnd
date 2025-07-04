@@ -205,6 +205,7 @@
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 20px;
+  box-shadow: 4px 4px 10px black;
   
 }
 
@@ -291,6 +292,7 @@
   height: 40px;
   width: 200px;
   text-align: center;
+  color: black;
  
 }
 
@@ -307,10 +309,11 @@
 
 .total-amount{
   text-align: center;
+  color: black;
 }
 
 .pay-button{
-  border: 1px solid white;
+  /* border: 1px solid white; */
   height: 50px;
   width: 200px;
   margin-top: 45px;
@@ -320,6 +323,10 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  
 }
 
 .pay-button.disabled{
@@ -327,5 +334,7 @@
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+
 
 

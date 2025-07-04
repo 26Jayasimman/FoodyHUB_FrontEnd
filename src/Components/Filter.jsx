@@ -288,7 +288,8 @@ function Filter() {
                     <div>{item.locality}</div>
                   </div>
                 </div>
-                <hr className="line"/>
+                <br />
+                {/* <hr className="line"/> */}
                 <div className="box44">
                   <p>CUISINE : {item.cuisine.map((c) => c.name).join(", ")}</p>
                   <p>COST for TWO : ₹{item.min_price}</p>

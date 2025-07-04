@@ -19,7 +19,8 @@ function QSitems({mealtypes}){
 
     return(
         <>
-        {mealtypes.map((item,index)=>(
+       <div className="mealtype-mainborder">
+         {mealtypes.map((item,index)=>(
             <div className="Card col-12 col-sm-12 col-md-4 col-lg-3" key={item.meal_type} onClick={()=>handelNavigate(item.meal_type)}>
             
             <div className="QSIimgdiv">
@@ -37,6 +38,7 @@ function QSitems({mealtypes}){
                 </div>
             </div>
         </div>))}
+       </div>
         </>
     )
 }

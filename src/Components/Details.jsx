@@ -49,7 +49,7 @@ function Details() {
       bottom: "auto",
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
-      backgroundColor: "#035d5e",
+      backgroundColor: "#7c7c7c",
       color: "white",
       zIndex: 9999,
     },

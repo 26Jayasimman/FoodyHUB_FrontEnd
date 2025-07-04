@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "../Styles/Header.css";
+
 import ModalLogin from "./ModalLogin";
 
 // Modal.setAppElement("#root");
@@ -10,20 +11,26 @@ function Header() {
   const [backgroundColor, setBackgroundColor] = useState("");
   const [display, setDisplay] = useState("");
   const [loginModal, setLoginModal] = useState(false);
-
+  
   const logonavigate = useNavigate();
-
+  const navigate = useNavigate()
+  
   const handlelogo = () => {
     logonavigate(`/`);
   };
-
+  
   const handleLogin = () => {
     setLoginModal(true);
   };
-
+  
   const handleCancel = () => {
     setLoginModal(false);
   };
+  
+  const handleSignup=()=>{
+    navigate('/Signup')
+
+  }
 
   useEffect(() => {
     const path = location.pathname;
@@ -40,13 +47,13 @@ function Header() {
         style={{ display: display }}
         onClick={() => handlelogo()}
       >
-        e!
+        F!
       </div>
       <div className="lsf">
         <button className="logb1" type="button" onClick={handleLogin}>
           Login
         </button>
-        <button className="logb1">SignUp</button>
+        <button className="logb1" onClick={handleSignup}>SignUp</button>
       </div>
 
       <ModalLogin isOpen={loginModal} onCancel={handleCancel} />

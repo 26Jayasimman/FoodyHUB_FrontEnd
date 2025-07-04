@@ -1,6 +1,6 @@
 import React from "react";
 import "../Styles/ModalLogin.css";
-import Google from './Google'
+import Google from "./Google";
 
 function ModalLogin({ isOpen, onCancel }) {
   if (!isOpen) return null;
@@ -42,7 +42,10 @@ function ModalLogin({ isOpen, onCancel }) {
             <button id="Cancelbutton" type="button" onClick={onCancel}>
               Cancel
             </button>
-           <div className="googlebutton"> <Google /></div>
+            <div className="googlebutton">
+              {" "}
+              <Google />
+            </div>
           </div>
         </div>
       </form>
