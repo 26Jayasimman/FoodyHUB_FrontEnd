@@ -4,69 +4,72 @@ import Google from "./Google";
 import axios from "axios";
 
 function ModalLogin({ isOpen, onCancel }) {
-  
-  const [inputs,setInputs]=useState({email:'',password:''})
-  const [errors,setErrors]=useState({email:false,password:false,custom:null});
-  const [loads,setLoads]=useState(false)
-  
+  const [inputs, setInputs] = useState({ email: "", password: "" });
+  const [errors, setErrors] = useState({
+    email: false,
+    password: false,
+    custom: null,
+  });
+  const [loads, setLoads] = useState(false);
+
   if (!isOpen) return null;
 
-  const handleEmailChange=(event)=>{
-    const{name,value}=event.target
+  const handleEmailChange = (event) => {
+    const { name, value } = event.target;
 
-    setInputs({...inputs,[name]:value})
-    setErrors({...errors,[name]:false,custom:null})
-  }
+    setInputs({ ...inputs, [name]: value });
+    setErrors({
+      email: false,
+      password: false,
+      custom: error.response?.data?.message || "Login Failed",
+    });
+  };
 
-  const handUserLogin=async()=>{
-    const {email,password}=inputs;
+  const handUserLogin = async () => {
+    const { email, password } = inputs;
 
-    let newError={
-      email:false,
-      password:false,
-      custom:null
-    }
-
-    if(!email){
-      newError.email=true
-    }
-
-    if(!password){
-      newError.password=true
-    }
-
-    if(!email || !password){
-      setErrors(newError)
-      return
+    let newError = {
+      email: false,
+      password: false,
+      custom: null,
     };
 
-    try {
-      setLoads(true)
-
-      const response = await axios.post(
-        `${process.env.REACT_APP_API_BASE_URL}/apilogin`,{
-          email,
-          password
-        }
-      )
-      alert(response.data.message)
-      setInputs({email:'',password:''})
-      onCancel()
-      
-    } catch (error) {
-      console.log(error);  
-      setErrors({
-        ...errors,custom:error.response?.data?.message || 'Login Failed',
-      }
-      )}
-    finally{
-      setLoads(false)
+    if (!email) {
+      newError.email = true;
     }
 
+    if (!password) {
+      newError.password = true;
+    }
 
-  }
+    if (!email || !password) {
+      setErrors(newError);
+      return;
+    }
 
+    try {
+      setLoads(true);
 
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_BASE_URL}/apilogin`,
+        {
+          email,
+          password,
+        }
+      );
+      alert(response.data.message);
+      setInputs({ email: "", password: "" });
+      onCancel();
+    } catch (error) {
+      console.log(error);
+      setErrors({
+        ...errors,
+        custom: error.response?.data?.message || "Login Failed",
+      });
+    } finally {
+      setLoads(false);
+    }
+  };
 
   return (
     <>
@@ -88,7 +91,7 @@ function ModalLogin({ isOpen, onCancel }) {
               onChange={handleEmailChange}
             />
 
-           {errors.email && <p className="email-err-check">Invalid Email.</p>}
+            {errors.email && <p className="email-err-check">Invalid Email.</p>}
           </div>
 
           <div>
@@ -104,12 +107,16 @@ function ModalLogin({ isOpen, onCancel }) {
               placeholder="Enter Password"
               onChange={handleEmailChange}
             />
-             {errors.password && <p className="password-err-check">Invalid Password.</p>}
+            {errors.password && (
+              <p className="password-err-check">Invalid Password.</p>
+            )}
           </div>
 
-           {errors.custom && <p className="custom-error">{errors.custom}</p>}
+          {errors.custom && <p className="custom-error">{errors.custom}</p>}
 
-          {loads && <div className="spinner-border text-primary" role="status"></div>}
+          {loads && (
+            <div className="spinner-border text-primary" role="status"></div>
+          )}
 
           <div className="f6">
             <button id="logbutton" type="button" onClick={handUserLogin}>
