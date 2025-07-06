@@ -100,7 +100,9 @@ function ModalLogin({ isOpen, onCancel }) {
               type="password"
               id="passname"
               name="password"
+              value={inputs.password}
               placeholder="Enter Password"
+              onChange={handleEmailChange}
             />
              {errors.password && <p className="password-err-check">Invalid Password.</p>}
           </div>
