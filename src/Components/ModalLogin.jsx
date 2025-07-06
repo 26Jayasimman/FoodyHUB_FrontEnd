@@ -18,11 +18,7 @@ function ModalLogin({ isOpen, onCancel }) {
     const { name, value } = event.target;
 
     setInputs({ ...inputs, [name]: value });
-    setErrors({
-      email: false,
-      password: false,
-      custom: error.response?.data?.message || "Login Failed",
-    });
+    setErrors({ ...errors, [name]: false, custom: null });
   };
 
   const handUserLogin = async () => {
@@ -63,7 +59,8 @@ function ModalLogin({ isOpen, onCancel }) {
     } catch (error) {
       console.log(error);
       setErrors({
-        ...errors,
+        email: false,
+        password: false,
         custom: error.response?.data?.message || "Login Failed",
       });
     } finally {
