@@ -18,8 +18,9 @@
   background: white;
   padding: 30px;
   border-radius: 8px;
-  max-width: 400px;
+  max-width: 600px;
   width: 100%;
+  height: auto;
   z-index: 10000; /* inside modal content */
 }
 
@@ -79,4 +80,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.email-err-check ,
+.password-err-check {
+  color: red;
 }

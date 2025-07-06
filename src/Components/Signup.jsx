@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../Styles/Signup.css";
 import axios from "axios";
 
-function SignUp() {
+function SignUp({ isOpen, onCancel }) {
   const initialError = {
     name: { required: false },
     email: { required: false },
@@ -18,6 +18,8 @@ function SignUp() {
     email: "",
     password: "",
   });
+
+  if (!isOpen) return null;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -39,30 +41,28 @@ function SignUp() {
     }
 
     if (!hasError) {
-    try {
+      try {
         setLoad(true);
 
-      const response = await axios.post(
-        `${process.env.REACT_APP_API_BASE_URL}/apisignup`,
-        {
-          username: inputs.name,
-          email: inputs.email,
-          password: inputs.password,
-        }
-      );
+        const response = await axios.post(
+          `${process.env.REACT_APP_API_BASE_URL}/apisignup`,
+          {
+            username: inputs.name,
+            email: inputs.email,
+            password: inputs.password,
+          }
+        );
 
-      if(response.data.message){
-        alert(response.data.message)
-        setInputs({name:'',email:'',password:''})
+        if (response.data.message) {
+          alert(response.data.message);
+          setInputs({ name: "", email: "", password: "" });
+        }
+      } catch (error) {
+        console.log(error);
+        errors.custom_error = error.response?.data?.message || "Signup failed";
+      } finally {
+        setLoad(false);
       }
-      
-    } catch (error) {
-      console.log(error);
-       errors.custom_error = error.response?.data?.message || "Signup failed";
-    }
-    finally{
-      setLoad(false)
-    }
     }
     setErrors(errors);
   };
@@ -75,6 +75,7 @@ function SignUp() {
     <>
       <div className="l-mb-1">
         <div className="l-mb-2">
+          <button onClick={onCancel}>X</button>
           <div className="reg">
             <h1>Register Now</h1>
           </div>

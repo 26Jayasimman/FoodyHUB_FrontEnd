@@ -1,14 +1,14 @@
-body{
-    background-color: transparent;
-}
+
 .l-mb-1{
-    border: 1px solid white;
+    border: 1px solid green;
     height: auto;
     width: 50%;
     margin: auto;
-    background-color: rgb(146, 144, 144);
+    /* background-color: rgb(146, 144, 144); */
+    background: rgba(0, 0, 0, 0.4); 
     margin-top: 50px;
     border-radius: 20px;
+    z-index: 9999999;
 }
 
 .l-mb-2{

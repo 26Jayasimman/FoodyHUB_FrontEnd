@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "../Styles/Header.css";
 
 import ModalLogin from "./ModalLogin";
+import SignUp from "./Signup";
 
 // Modal.setAppElement("#root");
 
@@ -11,9 +12,9 @@ function Header() {
   const [backgroundColor, setBackgroundColor] = useState("");
   const [display, setDisplay] = useState("");
   const [loginModal, setLoginModal] = useState(false);
+  const [signUpModal,setSignupModal]=useState(false)
   
   const logonavigate = useNavigate();
-  const navigate = useNavigate()
   
   const handlelogo = () => {
     logonavigate(`/`);
@@ -28,8 +29,7 @@ function Header() {
   };
   
   const handleSignup=()=>{
-    navigate('/Signup')
-
+    setSignupModal(true)
   }
 
   useEffect(() => {
@@ -57,6 +57,8 @@ function Header() {
       </div>
 
       <ModalLogin isOpen={loginModal} onCancel={handleCancel} />
+      <SignUp isOpen={signUpModal} onCancel={()=>setSignupModal(false)}/>
+      
     </div>
   );
 }
